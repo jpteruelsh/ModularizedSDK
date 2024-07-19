@@ -1,12 +1,12 @@
-import coremodule.Platform
+import coremodule.Placeholder
 
 data class UserProfile (
     val name: String,
     val age: Int
 ) {
-    val platform: Platform = Platform()
+    val placeholder = Placeholder()
 
     fun greet(): String {
-        return "Hello, ${name} in ${platform.platform}!"
+        return "Hello, ${name} in ${placeholder.platform}!"
     }
 }

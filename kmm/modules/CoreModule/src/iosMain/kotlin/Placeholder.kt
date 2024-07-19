@@ -1,5 +1,5 @@
 package coremodule
 
-actual class Platform actual constructor() {
+actual class Placeholder actual constructor() {
     actual val platform: String = "iOS"
 }

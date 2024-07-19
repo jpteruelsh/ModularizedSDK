@@ -1,5 +1,5 @@
 package coremodule
 
-expect class Platform() {
+expect class Placeholder() {
     val platform: String
 }

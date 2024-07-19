@@ -43,13 +43,22 @@ class FirstFragment : Fragment() {
             // This worked in iOS, but not in Android
             val result = greeting.greet()
             // ideally, I expect the UserProfile class should be accessible here
-            val userProfile = UserProfile(
-                name = "John Doe",
-                age = 30
-            )
+            // also important information:
+            // while the `greeting.greet()` worked in iOS,
+            // the UserProfile class was not accessible in iOS as well
+//            val userProfile = UserProfile(
+//                name = "John Doe",
+//                age = 30
+//            )
             // but I'm getting build errors here.
             // Therefore, there's something that I need to adjust on the KMM side
-            binding.textviewFirst.text = "meh";
+
+            // additional info: in KMM, I commented the UserProfile class instantiation
+            //   in the Greeting class, and the app worked fine here.
+            // Therefore, I'm guessing that the UserProfile class is not accessible in the Greeting class
+            //   through android implementation;
+            //   whereas weirdly enough, it worked in iOS
+            binding.textviewFirst.text = result;
         }
 
     }

@@ -30,6 +30,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
+            implementation(project(":modules:CoreModule"))
             implementation(project(":modules:ProfileModule"))
         }
         commonTest.dependencies {
