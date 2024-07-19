@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <compositeConfiguration>
           <compositeBuild compositeDefinitionSource="SCRIPT">
             <builds>
-              <build path="$PROJECT_DIR$/../ModularizedLibrary" name="ModularizedLibrary">
+              <build path="$PROJECT_DIR$/../kmm" name="ModularizedLibrary">
                 <projects>
-                  <project path="$PROJECT_DIR$/../ModularizedLibrary" />
-                  <project path="$PROJECT_DIR$/../ModularizedLibrary/ModularizedSDK" />
-                  <project path="$PROJECT_DIR$/../ModularizedLibrary/modules" />
-                  <project path="$PROJECT_DIR$/../ModularizedLibrary/modules/CoreModule" />
-                  <project path="$PROJECT_DIR$/../ModularizedLibrary/modules/ProfileModule" />
+                  <project path="$PROJECT_DIR$/../kmm" />
+                  <project path="$PROJECT_DIR$/../kmm/ModularizedSDK" />
+                  <project path="$PROJECT_DIR$/../kmm/modules" />
+                  <project path="$PROJECT_DIR$/../kmm/modules/CoreModule" />
+                  <project path="$PROJECT_DIR$/../kmm/modules/ProfileModule" />
                 </projects>
               </build>
             </builds>
@@ -24,11 +25,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/../ModularizedLibrary" />
-            <option value="$PROJECT_DIR$/../ModularizedLibrary/ModularizedSDK" />
-            <option value="$PROJECT_DIR$/../ModularizedLibrary/modules" />
-            <option value="$PROJECT_DIR$/../ModularizedLibrary/modules/CoreModule" />
-            <option value="$PROJECT_DIR$/../ModularizedLibrary/modules/ProfileModule" />
+            <option value="$PROJECT_DIR$/../kmm" />
+            <option value="$PROJECT_DIR$/../kmm/ModularizedSDK" />
+            <option value="$PROJECT_DIR$/../kmm/modules" />
+            <option value="$PROJECT_DIR$/../kmm/modules/CoreModule" />
+            <option value="$PROJECT_DIR$/../kmm/modules/ProfileModule" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
