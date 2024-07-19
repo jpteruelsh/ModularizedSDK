@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../ModularizedLibrary" name="ModularizedLibrary">
+                <projects>
+                  <project path="$PROJECT_DIR$/../ModularizedLibrary" />
+                  <project path="$PROJECT_DIR$/../ModularizedLibrary/ModularizedSDK" />
+                  <project path="$PROJECT_DIR$/../ModularizedLibrary/modules" />
+                  <project path="$PROJECT_DIR$/../ModularizedLibrary/modules/CoreModule" />
+                  <project path="$PROJECT_DIR$/../ModularizedLibrary/modules/ProfileModule" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../ModularizedLibrary" />
+            <option value="$PROJECT_DIR$/../ModularizedLibrary/ModularizedSDK" />
+            <option value="$PROJECT_DIR$/../ModularizedLibrary/modules" />
+            <option value="$PROJECT_DIR$/../ModularizedLibrary/modules/CoreModule" />
+            <option value="$PROJECT_DIR$/../ModularizedLibrary/modules/ProfileModule" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

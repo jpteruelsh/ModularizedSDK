@@ -1,0 +1,16 @@
+PODS:
+  - ModularizedSDK (1.0)
+
+DEPENDENCIES:
+  - ModularizedSDK (from `../kmm/ModularizedSDK`)
+
+EXTERNAL SOURCES:
+  ModularizedSDK:
+    :path: "../kmm/ModularizedSDK"
+
+SPEC CHECKSUMS:
+  ModularizedSDK: 57f5959c0c686c64361c7a0759ae1e3caad80206
+
+PODFILE CHECKSUM: 9f33056005255f571c943c6706606d572832827d
+
+COCOAPODS: 1.15.2
