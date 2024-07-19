@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+//    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -49,5 +51,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.example.modularizedlibrary:ModularizedLibrary:0.0.0")
 }

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.modularizedandroiddemo.databinding.FragmentFirstBinding
+import com.example.modularizedlibrary.Greeting
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -33,8 +34,24 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+
+
+            val greeting = Greeting()
+            // WARNING: The app crashes at this point;
+            // My theory is that the Greeting class is not able to access the UserProfile class
+            // This worked in iOS, but not in Android
+            val result = greeting.greet()
+            // ideally, I expect the UserProfile class should be accessible here
+            val userProfile = UserProfile(
+                name = "John Doe",
+                age = 30
+            )
+            // but I'm getting build errors here.
+            // Therefore, there's something that I need to adjust on the KMM side
+            binding.textviewFirst.text = "meh";
         }
+
     }
 
     override fun onDestroyView() {
