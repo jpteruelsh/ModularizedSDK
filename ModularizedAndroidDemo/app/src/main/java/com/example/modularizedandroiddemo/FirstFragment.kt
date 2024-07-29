@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.modularizedandroiddemo.databinding.FragmentFirstBinding
 import com.example.modularizedlibrary.Greeting
+import com.example.modularizedlibrary.profile.UserProfile
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -46,10 +47,10 @@ class FirstFragment : Fragment() {
             // also important information:
             // while the `greeting.greet()` worked in iOS,
             // the UserProfile class was not accessible in iOS as well
-//            val userProfile = UserProfile(
-//                name = "John Doe",
-//                age = 30
-//            )
+            val userProfile = UserProfile(
+                name = "John Washington",
+                age = 31
+            )
             // but I'm getting build errors here.
             // Therefore, there's something that I need to adjust on the KMM side
 
@@ -58,7 +59,7 @@ class FirstFragment : Fragment() {
             // Therefore, I'm guessing that the UserProfile class is not accessible in the Greeting class
             //   through android implementation;
             //   whereas weirdly enough, it worked in iOS
-            binding.textviewFirst.text = result;
+            binding.textviewFirst.text = userProfile.greet();
         }
 
     }

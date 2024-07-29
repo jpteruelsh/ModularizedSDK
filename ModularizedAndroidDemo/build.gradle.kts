@@ -14,12 +14,19 @@ tasks.register("buildAndCopyKmmAar") {
             commandLine("sh", "-c", "cd $kmmProjectPath && $buildCommand")
         }
 
-        val aarSourcePath = "$kmmProjectPath/ModularizedSDK/build/outputs/aar/ModularizedSDK-release.aar"
+        val modulesDir = file("$kmmProjectPath/modules")
+        val modules = modulesDir.listFiles()?.filter { it.isDirectory }?.map { it.name } ?: emptyList()
+        val modulesSourcePaths = modules.map { "$kmmProjectPath/modules/$it/build/outputs/aar/$it-release.aar" }
+        val mainSourcePath = "$kmmProjectPath/ModularizedSDK/build/outputs/aar/ModularizedSDK-release.aar"
+
+        val aarSourcePaths = listOf(mainSourcePath) + modulesSourcePaths
         val aarTargetPath = "${project.rootDir}/app/libs"
 
-        copy {
-            from(aarSourcePath)
-            into(aarTargetPath)
+        aarSourcePaths.forEach { aarSourcePath ->
+            copy {
+                from(aarSourcePath)
+                into(aarTargetPath)
+            }
         }
     }
 }

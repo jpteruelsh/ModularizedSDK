@@ -1,16 +1,15 @@
 package com.example.modularizedlibrary
 
-import UserProfile
+import com.example.modularizedlibrary.profile.UserProfile
 
 class Greeting {
     private val platform: Platform = getPlatform()
 
     fun greet(): String {
-        return "Hello world!!!";
-//        val profile = UserProfile(
-//            name = "John Doe",
-//            age = 30
-//        )
-//        return profile.greet()
+        val profile = UserProfile(
+            name = "John Doe",
+            age = 30
+        )
+        return profile.greet()
     }
 }
