@@ -38,27 +38,11 @@ class FirstFragment : Fragment() {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 
 
-            val greeting = Greeting()
-            // WARNING: The app crashes at this point;
-            // My theory is that the Greeting class is not able to access the UserProfile class
-            // This worked in iOS, but not in Android
-            val result = greeting.greet()
-            // ideally, I expect the UserProfile class should be accessible here
-            // also important information:
-            // while the `greeting.greet()` worked in iOS,
-            // the UserProfile class was not accessible in iOS as well
+            // fixed: The fix applied was to include the modules' AARs files when copying
             val userProfile = UserProfile(
                 name = "John Washington",
                 age = 31
             )
-            // but I'm getting build errors here.
-            // Therefore, there's something that I need to adjust on the KMM side
-
-            // additional info: in KMM, I commented the UserProfile class instantiation
-            //   in the Greeting class, and the app worked fine here.
-            // Therefore, I'm guessing that the UserProfile class is not accessible in the Greeting class
-            //   through android implementation;
-            //   whereas weirdly enough, it worked in iOS
             binding.textviewFirst.text = userProfile.greet();
         }
 

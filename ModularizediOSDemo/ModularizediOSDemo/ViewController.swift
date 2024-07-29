@@ -18,7 +18,10 @@ class ViewController: UIViewController {
         let greeting = Greeting()
         let greet = greeting.greet();
         
-        theLabelLabel.text = greet
+        let mm = MainClass(name: "Harrison Ford")
+//        CoreClass(name:"try") 
+        
+        theLabelLabel.text = mm.greet()
     }
 
 
