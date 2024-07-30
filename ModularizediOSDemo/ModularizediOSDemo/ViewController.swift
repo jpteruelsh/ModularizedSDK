@@ -18,10 +18,20 @@ class ViewController: UIViewController {
         let greeting = Greeting()
         let greet = greeting.greet();
         
+        // This comes from the ModularizedSDK "main" module
         let mm = MainClass(name: "Harrison Ford")
-//        CoreClass(name:"try") 
-        
         theLabelLabel.text = mm.greet()
+        
+        // This comes from the ProfileModule
+        let profile = ProfileClass.companion.createProfileClass()
+        theLabelLabel.text = profile.name
+        
+        // This comes from the CoreModule
+        let core = CoreClass.companion.createCoreClass()
+        theLabelLabel.text = core.name
+        let core2 = CoreClass(name:"try")
+        theLabelLabel.text = core2.name
+        
     }
 
 

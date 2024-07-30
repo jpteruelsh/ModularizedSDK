@@ -24,6 +24,8 @@ kotlin {
         framework {
             baseName = "ModularizedSDK"
             isStatic = true
+            export(project(":modules:CoreModule"))
+            export(project(":modules:ProfileModule"))
         }
     }
     
