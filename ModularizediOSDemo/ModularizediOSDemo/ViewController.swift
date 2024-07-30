@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let core = CoreClass.companion.createCoreClass()
         theLabelLabel.text = core.name
         let core2 = CoreClass(name:"try")
-        theLabelLabel.text = core2.name
+        theLabelLabel.text = core2.greet()
         
     }
 
