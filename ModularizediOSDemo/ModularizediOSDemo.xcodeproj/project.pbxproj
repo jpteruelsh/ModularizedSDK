@@ -17,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0665FC3710909E696B5027DB /* Pods-ModularizediOSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModularizediOSDemo.release.xcconfig"; path = "Target Support Files/Pods-ModularizediOSDemo/Pods-ModularizediOSDemo.release.xcconfig"; sourceTree = "<group>"; };
 		43AA27AF2C4988A000A31FD1 /* ModularizediOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModularizediOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AA27B22C4988A000A31FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AA27B42C4988A000A31FD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +26,6 @@
 		43AA27BE2C4988A100A31FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43AA27C02C4988A100A31FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DA8E2CA42C0C8F846DD892 /* Pods_ModularizediOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModularizediOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDCEDC9C7711A83EE16C2D1C /* Pods-ModularizediOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModularizediOSDemo.debug.xcconfig"; path = "Target Support Files/Pods-ModularizediOSDemo/Pods-ModularizediOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,22 +40,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		101328268CF4DD9990978426 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DDCEDC9C7711A83EE16C2D1C /* Pods-ModularizediOSDemo.debug.xcconfig */,
-				0665FC3710909E696B5027DB /* Pods-ModularizediOSDemo.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		43AA27A62C4988A000A31FD1 = {
 			isa = PBXGroup;
 			children = (
 				43AA27B12C4988A000A31FD1 /* ModularizediOSDemo */,
 				43AA27B02C4988A000A31FD1 /* Products */,
-				101328268CF4DD9990978426 /* Pods */,
 				DA08BEDE67B07095B7A6D225 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -338,7 +325,6 @@
 		};
 		43AA27C42C4988A100A31FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDCEDC9C7711A83EE16C2D1C /* Pods-ModularizediOSDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -367,7 +353,6 @@
 		};
 		43AA27C52C4988A100A31FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0665FC3710909E696B5027DB /* Pods-ModularizediOSDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
