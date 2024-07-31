@@ -13,7 +13,7 @@
 		43AA27BA2C4988A000A31FD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 43AA27B92C4988A000A31FD1 /* Base */; };
 		43AA27BC2C4988A100A31FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AA27BB2C4988A100A31FD1 /* Assets.xcassets */; };
 		43AA27BF2C4988A100A31FD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 43AA27BE2C4988A100A31FD1 /* Base */; };
-		B211FEF92DCB734C9C15CCA0 /* Pods_ModularizediOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DA8E2CA42C0C8F846DD892 /* Pods_ModularizediOSDemo.framework */; };
+		43F0940F2C5AD3A300E02B18 /* ModularizedLibrarySPM in Frameworks */ = {isa = PBXBuildFile; productRef = 43F0940E2C5AD3A300E02B18 /* ModularizedLibrarySPM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		43AA27AC2C4988A000A31FD1 /* Frameworks */ = {
+		43F094092C5AD34900E02B18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B211FEF92DCB734C9C15CCA0 /* Pods_ModularizediOSDemo.framework in Frameworks */,
+				43F0940F2C5AD3A300E02B18 /* ModularizedLibrarySPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,9 +86,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43AA27C32C4988A100A31FD1 /* Build configuration list for PBXNativeTarget "ModularizediOSDemo" */;
 			buildPhases = (
-				B8C75CA277A557072FB44B78 /* [CP] Check Pods Manifest.lock */,
+				43F094092C5AD34900E02B18 /* Frameworks */,
 				43AA27AB2C4988A000A31FD1 /* Sources */,
-				43AA27AC2C4988A000A31FD1 /* Frameworks */,
 				43AA27AD2C4988A000A31FD1 /* Resources */,
 			);
 			buildRules = (
@@ -96,6 +95,16 @@
 			dependencies = (
 			);
 			name = ModularizediOSDemo;
+			packageProductDependencies = (
+				43F7572B2C5A97FC009400C2 /* ModularizedLibrarySPM */,
+				43F7572D2C5A98E9009400C2 /* ModularizedLibrarySPM */,
+				4307339B2C5AB46200BB0C99 /* ModularizedLibrarySPM */,
+				4307339F2C5AB52D00BB0C99 /* ModularizedLibrarySPM */,
+				430733A12C5AB54100BB0C99 /* ModularizedLibrarySPM */,
+				430733A32C5AB5AC00BB0C99 /* ModularizedLibrarySPM */,
+				430733A52C5AB60D00BB0C99 /* ModularizedLibrarySPM */,
+				43F0940E2C5AD3A300E02B18 /* ModularizedLibrarySPM */,
+			);
 			productName = ModularizediOSDemo;
 			productReference = 43AA27AF2C4988A000A31FD1 /* ModularizediOSDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 43AA27A62C4988A000A31FD1;
+			packageReferences = (
+				43F0940D2C5AD3A300E02B18 /* XCRemoteSwiftPackageReference "ModularizedLibrarySPM" */,
+			);
 			productRefGroup = 43AA27B02C4988A000A31FD1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,31 +157,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B8C75CA277A557072FB44B78 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ModularizediOSDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43AA27AB2C4988A000A31FD1 /* Sources */ = {
@@ -338,6 +325,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,6 +390,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43F0940D2C5AD3A300E02B18 /* XCRemoteSwiftPackageReference "ModularizedLibrarySPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpteruelsh/ModularizedLibrarySPM.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4307339B2C5AB46200BB0C99 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		4307339F2C5AB52D00BB0C99 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		430733A12C5AB54100BB0C99 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		430733A32C5AB5AC00BB0C99 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		430733A52C5AB60D00BB0C99 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		43F0940E2C5AD3A300E02B18 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F0940D2C5AD3A300E02B18 /* XCRemoteSwiftPackageReference "ModularizedLibrarySPM" */;
+			productName = ModularizedLibrarySPM;
+		};
+		43F7572B2C5A97FC009400C2 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		43F7572D2C5A98E9009400C2 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43AA27A72C4988A000A31FD1 /* Project object */;
 }

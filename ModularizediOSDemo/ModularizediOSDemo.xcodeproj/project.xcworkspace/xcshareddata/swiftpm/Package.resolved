@@ -1,0 +1,15 @@
+{
+  "originHash" : "ffbc4a6937dea2e16e4238b814faddb1c8c5470152fbb080c0b00ec842a0c3ba",
+  "pins" : [
+    {
+      "identity" : "modularizedlibraryspm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpteruelsh/ModularizedLibrarySPM.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "25f63bd1a08a3880c1e5bd385c311f5c451dcd60"
+      }
+    }
+  ],
+  "version" : 3
+}
