@@ -21,10 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ModularizedAndroidDemo"
 include(":app")
-//includeBuild("../kmm") {
-//    dependencySubstitution {
-//        substitute(module("com.example.modularizedlibrary:ModularizedLibrary")).using(project(":"))
-//    }
-//}
 //include(":ModularizedSDK")
 //project(":ModularizedSDK").projectDir = file("../kmm/ModularizedSDK")
