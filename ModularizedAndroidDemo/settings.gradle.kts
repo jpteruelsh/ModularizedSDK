@@ -21,5 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "ModularizedAndroidDemo"
 include(":app")
-//include(":ModularizedSDK")
-//project(":ModularizedSDK").projectDir = file("../kmm/ModularizedSDK")
+include(":ModularizedSDK")
+project(":ModularizedSDK").projectDir = file("../kmm/ModularizedSDK")
+include(":modules:CoreModule")
+project(":modules:CoreModule").projectDir = file("../kmm/modules/CoreModule")
+include(":modules:ProfileModule")
+project(":modules:ProfileModule").projectDir = file("../kmm/modules/ProfileModule")

@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.modularizedandroiddemo.databinding.FragmentFirstBinding
 import com.example.modularizedlibrary.Greeting
 import com.example.modularizedlibrary.profile.UserProfile
+import coremodule.com.example.modularizedlibrary.core.CoreClass
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -44,6 +45,9 @@ class FirstFragment : Fragment() {
                 age = 31
             )
             binding.textviewFirst.text = userProfile.greet();
+
+            val coreClass = CoreClass(name = "George Washington")
+            binding.textviewFirst.text = coreClass.greet();
         }
 
     }
