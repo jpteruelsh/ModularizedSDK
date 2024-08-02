@@ -13,7 +13,6 @@
 		43AA27BA2C4988A000A31FD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 43AA27B92C4988A000A31FD1 /* Base */; };
 		43AA27BC2C4988A100A31FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AA27BB2C4988A100A31FD1 /* Assets.xcassets */; };
 		43AA27BF2C4988A100A31FD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 43AA27BE2C4988A100A31FD1 /* Base */; };
-		43F0940F2C5AD3A300E02B18 /* ModularizedLibrarySPM in Frameworks */ = {isa = PBXBuildFile; productRef = 43F0940E2C5AD3A300E02B18 /* ModularizedLibrarySPM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		43AA27BB2C4988A100A31FD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43AA27BE2C4988A100A31FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43AA27C02C4988A100A31FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5DA8E2CA42C0C8F846DD892 /* Pods_ModularizediOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModularizediOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F0940F2C5AD3A300E02B18 /* ModularizedLibrarySPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +71,6 @@
 		DA08BEDE67B07095B7A6D225 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D5DA8E2CA42C0C8F846DD892 /* Pods_ModularizediOSDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,7 +99,7 @@
 				430733A12C5AB54100BB0C99 /* ModularizedLibrarySPM */,
 				430733A32C5AB5AC00BB0C99 /* ModularizedLibrarySPM */,
 				430733A52C5AB60D00BB0C99 /* ModularizedLibrarySPM */,
-				43F0940E2C5AD3A300E02B18 /* ModularizedLibrarySPM */,
+				43F1CB5B2C5D1ED6002D29A2 /* ModularizedLibrarySPM */,
 			);
 			productName = ModularizediOSDemo;
 			productReference = 43AA27AF2C4988A000A31FD1 /* ModularizediOSDemo.app */;
@@ -134,7 +130,6 @@
 			);
 			mainGroup = 43AA27A62C4988A000A31FD1;
 			packageReferences = (
-				43F0940D2C5AD3A300E02B18 /* XCRemoteSwiftPackageReference "ModularizedLibrarySPM" */,
 			);
 			productRefGroup = 43AA27B02C4988A000A31FD1 /* Products */;
 			projectDirPath = "";
@@ -391,17 +386,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		43F0940D2C5AD3A300E02B18 /* XCRemoteSwiftPackageReference "ModularizedLibrarySPM" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jpteruelsh/ModularizedLibrarySPM.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		4307339B2C5AB46200BB0C99 /* ModularizedLibrarySPM */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -423,9 +407,8 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = ModularizedLibrarySPM;
 		};
-		43F0940E2C5AD3A300E02B18 /* ModularizedLibrarySPM */ = {
+		43F1CB5B2C5D1ED6002D29A2 /* ModularizedLibrarySPM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 43F0940D2C5AD3A300E02B18 /* XCRemoteSwiftPackageReference "ModularizedLibrarySPM" */;
 			productName = ModularizedLibrarySPM;
 		};
 		43F7572B2C5A97FC009400C2 /* ModularizedLibrarySPM */ = {
