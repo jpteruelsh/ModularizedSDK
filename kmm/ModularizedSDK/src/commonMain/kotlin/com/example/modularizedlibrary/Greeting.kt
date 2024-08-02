@@ -1,7 +1,9 @@
 package com.example.modularizedlibrary
 
 import com.example.modularizedlibrary.profile.UserProfile
+import kotlin.js.JsExport
 
+@JsExport
 class Greeting {
     private val platform: Platform = getPlatform()
 

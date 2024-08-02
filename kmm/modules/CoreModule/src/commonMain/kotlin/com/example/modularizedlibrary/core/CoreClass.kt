@@ -1,5 +1,8 @@
 package coremodule.com.example.modularizedlibrary.core
 
+import kotlin.js.JsExport
+
+@JsExport
 data class CoreClass (
     val name: String
 ) {

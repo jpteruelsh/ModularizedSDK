@@ -1,8 +1,10 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.npmPublish)
 }
 
 kotlin {
@@ -13,8 +15,8 @@ kotlin {
             }
         }
     }
-    val xcframeworkName = "ModularizedSDK"
-    val xcf = XCFramework(xcframeworkName)
+    val libName = "ModularizedSDK"
+    val xcf = XCFramework(libName)
 
     listOf(
         iosX64(),
@@ -22,25 +24,35 @@ kotlin {
         iosSimulatorArm64(),
     ).forEach {
         it.binaries.framework {
-            baseName = xcframeworkName
+            baseName = libName
 
             // Specify CFBundleIdentifier to uniquely identify the framework
-            binaryOption("bundleId", "org.example.${xcframeworkName}")
+            binaryOption("bundleId", "org.example.${libName}")
             xcf.add(this)
             isStatic = true
             export(project(":modules:CoreModule"))
             export(project(":modules:ProfileModule"))
         }
     }
+
+    js(IR) {
+        moduleName = libName
+        useEsModules()
+        nodejs()
+        binaries.library()
+    }
     
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            api(project(":modules:CoreModule"))
-            api(project(":modules:ProfileModule"))
+            implementation(project(":modules:CoreModule"))
+            implementation(project(":modules:ProfileModule"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+        jsMain.dependencies {
+
         }
     }
 }
@@ -57,6 +69,11 @@ android {
     }
 }
 
+tasks.withType<KotlinJsCompile>().configureEach {
+    kotlinOptions {
+        target = "es2015"
+    }
+}
 
 tasks.register<Copy>("updateSPM") {
     dependsOn("assembleXCFramework")

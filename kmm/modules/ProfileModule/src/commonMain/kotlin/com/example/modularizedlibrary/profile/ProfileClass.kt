@@ -1,5 +1,8 @@
 package com.example.modularizedlibrary.profile
 
+import kotlin.js.JsExport
+
+@JsExport
 data class ProfileClass (
     val name: String
 ) {

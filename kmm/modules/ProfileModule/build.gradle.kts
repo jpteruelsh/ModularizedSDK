@@ -15,16 +15,14 @@ kotlin {
     iosArm64()
     iosSimulatorArm64()
 
+    js(IR) {
+        nodejs()
+    }
+
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
             api(project(":modules:CoreModule"))
-        }
-        androidMain.dependencies {
-            // put your android dependencies here
-        }
-        iosMain.dependencies {
-            // put your ios dependencies here
         }
     }
 }
