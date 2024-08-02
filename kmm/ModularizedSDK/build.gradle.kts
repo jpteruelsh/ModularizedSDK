@@ -56,3 +56,16 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
+
+
+tasks.register<Copy>("updateSPM") {
+    dependsOn("assembleXCFramework")
+    val xcfName = "ModularizedSDK.xcframework"
+    val sourceDir = "$buildDir/XCFrameworks/release/$xcfName"
+    val targetDir = "../outputs/ios-spm/Sources/$xcfName"
+    from(sourceDir)
+    into(targetDir)
+    doLast {
+        println("XCFramework copied to $targetDir")
+    }
+}

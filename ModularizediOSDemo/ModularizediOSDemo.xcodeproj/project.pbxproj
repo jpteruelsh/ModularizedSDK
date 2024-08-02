@@ -84,6 +84,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43AA27C32C4988A100A31FD1 /* Build configuration list for PBXNativeTarget "ModularizediOSDemo" */;
 			buildPhases = (
+				43A339CD2C5D25BA00907C2F /* ShellScript */,
 				43F094092C5AD34900E02B18 /* Frameworks */,
 				43AA27AB2C4988A000A31FD1 /* Sources */,
 				43AA27AD2C4988A000A31FD1 /* Resources */,
@@ -156,6 +157,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43A339CD2C5D25BA00907C2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\n# Navigate to the KMM project directory\ncd ../kmm/\n\n# Run the Gradle tasks to assemble and copy the XCFramework\n./gradlew updateSPM\n\n# Check if the Gradle task was successful\nif [ $? -ne 0 ]; then\n  echo \"Gradle task failed\"\n  exit 1\nfi\n\necho \"Gradle task completed successfully\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43AA27AB2C4988A000A31FD1 /* Sources */ = {
