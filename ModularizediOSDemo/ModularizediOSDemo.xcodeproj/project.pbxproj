@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A339CC2C5D214700907C2F /* ModularizedLibrarySPM in Frameworks */ = {isa = PBXBuildFile; productRef = 43A339CB2C5D214700907C2F /* ModularizedLibrarySPM */; };
 		43AA27B32C4988A000A31FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA27B22C4988A000A31FD1 /* AppDelegate.swift */; };
 		43AA27B52C4988A000A31FD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA27B42C4988A000A31FD1 /* SceneDelegate.swift */; };
 		43AA27B72C4988A000A31FD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA27B62C4988A000A31FD1 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A339CC2C5D214700907C2F /* ModularizedLibrarySPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,7 @@
 				430733A32C5AB5AC00BB0C99 /* ModularizedLibrarySPM */,
 				430733A52C5AB60D00BB0C99 /* ModularizedLibrarySPM */,
 				43F1CB5B2C5D1ED6002D29A2 /* ModularizedLibrarySPM */,
+				43A339CB2C5D214700907C2F /* ModularizedLibrarySPM */,
 			);
 			productName = ModularizediOSDemo;
 			productReference = 43AA27AF2C4988A000A31FD1 /* ModularizediOSDemo.app */;
@@ -130,6 +133,7 @@
 			);
 			mainGroup = 43AA27A62C4988A000A31FD1;
 			packageReferences = (
+				43A339CA2C5D214700907C2F /* XCLocalSwiftPackageReference "../kmm/outputs/ios-spm" */,
 			);
 			productRefGroup = 43AA27B02C4988A000A31FD1 /* Products */;
 			projectDirPath = "";
@@ -386,6 +390,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		43A339CA2C5D214700907C2F /* XCLocalSwiftPackageReference "../kmm/outputs/ios-spm" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../kmm/outputs/ios-spm";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		4307339B2C5AB46200BB0C99 /* ModularizedLibrarySPM */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -404,6 +415,10 @@
 			productName = ModularizedLibrarySPM;
 		};
 		430733A52C5AB60D00BB0C99 /* ModularizedLibrarySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModularizedLibrarySPM;
+		};
+		43A339CB2C5D214700907C2F /* ModularizedLibrarySPM */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ModularizedLibrarySPM;
 		};

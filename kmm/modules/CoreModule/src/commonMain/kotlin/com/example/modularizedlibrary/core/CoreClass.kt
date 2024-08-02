@@ -4,7 +4,7 @@ data class CoreClass (
     val name: String
 ) {
     fun greet(): String {
-        return "Hello, ${name}!"
+        return "Hello, ${name}! Welcome to the core module!"
     }
     
     companion object {
