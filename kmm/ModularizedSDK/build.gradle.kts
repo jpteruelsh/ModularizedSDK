@@ -1,4 +1,6 @@
+import dev.petuska.npm.publish.task.NpmPackTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
+import org.jetbrains.kotlin.gradle.plugin.KotlinJsCompilerType
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
@@ -18,6 +20,8 @@ kotlin {
     val libName = "ModularizedSDK"
     val xcf = XCFramework(libName)
 
+    version = "0.0.1"
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -35,7 +39,7 @@ kotlin {
         }
     }
 
-    js(IR) {
+    js {
         moduleName = libName
         useEsModules()
         nodejs()
@@ -66,12 +70,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-}
-
-tasks.withType<KotlinJsCompile>().configureEach {
-    kotlinOptions {
-        target = "es2015"
     }
 }
 

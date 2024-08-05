@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import {MainClass, Greeting} from 'ModularizedSDK';
-// import {CoreClass} from 'CoreModule';
+import { Greeting } from 'ModularizedSDK';
+// import { CoreClass} from 'ModularizedSDK/CoreModule'; // tried this, but doesn't work
 
 let core = new Greeting();
 let output = core.greet();
