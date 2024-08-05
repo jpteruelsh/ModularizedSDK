@@ -20,7 +20,7 @@ kotlin {
     val libName = "ModularizedSDK"
     val xcf = XCFramework(libName)
 
-    version = "0.0.1"
+    version = "0.0.2"
 
     listOf(
         iosX64(),
@@ -40,10 +40,17 @@ kotlin {
     }
 
     js {
+        compilations["main"].packageJson {
+            customField("exports", mapOf(
+                "." to "ModularizedSDK.mjs",
+                "./CoreModule" to "./ModularizedLibrary-modules-CoreModule.mjs"
+            ))
+        }
         moduleName = libName
         useEsModules()
         nodejs()
         binaries.library()
+
     }
     
     sourceSets {
