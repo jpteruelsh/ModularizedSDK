@@ -4,4 +4,5 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
     alias(libs.plugins.androidLibrary) apply false
+    alias(libs.plugins.npmPublish) apply false
 }
